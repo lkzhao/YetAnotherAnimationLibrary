@@ -12,7 +12,7 @@
         <!--Gesture View Controller-->
         <scene sceneID="M4R-HP-Io6">
             <objects>
-                <viewController id="Fuk-vV-GjF" customClass="GestureViewController" sceneMemberID="viewController">
+                <viewController id="Fuk-vV-GjF" customClass="GestureViewController" customModule="Examples" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zRw-Sr-HLa"/>
                         <viewControllerLayoutGuide type="bottom" id="7cH-X8-E1S"/>

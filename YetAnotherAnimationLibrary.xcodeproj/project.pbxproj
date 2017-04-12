@@ -22,7 +22,6 @@
 		B17BB1BE1E9BEDE000D287BA /* DecayAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BB1BD1E9BEDE000D287BA /* DecayAnimatable.swift */; };
 		B17BB1C01E9BEDEF00D287BA /* SpringAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BB1BF1E9BEDEF00D287BA /* SpringAnimatable.swift */; };
 		B17F18F31E8EE34800D2FA3D /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17F18F21E8EE34800D2FA3D /* Solver.swift */; };
-		B197CE1B1E8B660F004495AE /* Animate.h in Headers */ = {isa = PBXBuildFile; fileRef = B197CE191E8B660F004495AE /* Animate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B197CE1E1E8B660F004495AE /* YetAnotherAnimationLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B197CE171E8B660F004495AE /* YetAnotherAnimationLibrary.framework */; };
 		B197CE1F1E8B660F004495AE /* YetAnotherAnimationLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B197CE171E8B660F004495AE /* YetAnotherAnimationLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B197CE251E8B6615004495AE /* ValueAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197CE101E8B146F004495AE /* ValueAnimation.swift */; };
@@ -90,7 +89,6 @@
 		B197CE0E1E8B0FF3004495AE /* VectorConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorConvertible.swift; sourceTree = "<group>"; };
 		B197CE101E8B146F004495AE /* ValueAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueAnimation.swift; sourceTree = "<group>"; };
 		B197CE171E8B660F004495AE /* YetAnotherAnimationLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YetAnotherAnimationLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B197CE191E8B660F004495AE /* Animate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animate.h; sourceTree = "<group>"; };
 		B197CE1A1E8B660F004495AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B197CE2E1E8C50E9004495AE /* UIView+Animate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animate.swift"; sourceTree = "<group>"; };
 		B197CE341E8D7E95004495AE /* Announcer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcer.swift; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 				B16E80F11E99585B00E95C31 /* Animator */,
 				B16E80FB1E995A7300E95C31 /* Solvers */,
 				B17BB1C31E9BEE6B00D287BA /* Types & Extensions */,
-				B197CE191E8B660F004495AE /* Animate.h */,
 				B197CE1A1E8B660F004495AE /* Info.plist */,
 			);
 			path = Sources;
@@ -262,7 +259,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B197CE1B1E8B660F004495AE /* Animate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
