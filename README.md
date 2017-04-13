@@ -1,17 +1,17 @@
 # Yet Another Animation Library
 
-Designed for gesture-driven animations. Simple, fast and extensible. 
+Designed for gesture-driven animations. Extremely fast, yet simple and extensible. 
 
 It is written in pure swift 3.1 with protocol oriented design and extensive use of generics.
 
 Compare to other animation libraries, Animate has the following advantages:
 
-**Fast**: 
+**Extremely fast**: 
   * Uses SIMD types and instructions for calculation
   * Better compiler optimization through swift generics
   * Static store for animations, no key lookup when changing animation target
 
-**Easy**:
+**Simple**:
   * Builtin Curve(Basic), Spring, & Decay animations
   * Super simple API wrapper for UIView
   * Swift generics provide type safe way to assign animation values
