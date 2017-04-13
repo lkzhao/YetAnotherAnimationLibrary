@@ -12,9 +12,7 @@ Consider this as a swift optimized version of facebook's pop. It plays nicer wit
 
 **Simple**:
   * Supports Curve(Basic), Spring, & Decay animations out of the box
-  * Easy API for animating common animatable properties. 
-  
-    (checkout the [Extensions](https://github.com/lkzhao/YetAnotherAnimationLibrary/tree/master/Sources/Extensions) folder for list of included properties)
+  * Easy API for animating common animatable properties. (checkout the [Extensions](https://github.com/lkzhao/YetAnotherAnimationLibrary/tree/master/Sources/Extensions) folder for list of included properties)
   * Type safety guaranteed when assigning animation values
   * Observable, including value, velocity, and target value
   * Builtin chaining operator to easily react to changes in value
