@@ -156,7 +156,7 @@ extension Foo {
 ```
 
 ### via `yaal_register` & `yaal_animationFor`
-```
+```swift
 // or register ahead of time
 yaal_register(key: "volumn", 
               getter: { [weak self] in self?.volumn },
