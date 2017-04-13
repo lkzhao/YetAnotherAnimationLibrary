@@ -30,15 +30,19 @@
 		B197CE281E8B6615004495AE /* DisplayLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2ED181E8AE6E1005F0081 /* DisplayLink.swift */; };
 		B197CE291E8B6615004495AE /* VectorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197CE0E1E8B0FF3004495AE /* VectorConvertible.swift */; };
 		B197CE2A1E8B6615004495AE /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC14D01E8B08BD00933896 /* Vector.swift */; };
-		B197CE2F1E8C50E9004495AE /* UIView+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197CE2E1E8C50E9004495AE /* UIView+Animate.swift */; };
+		B197CE2F1E8C50E9004495AE /* UIView+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197CE2E1E8C50E9004495AE /* UIView+YAAL.swift */; };
 		B197CE351E8D7E95004495AE /* Announcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197CE341E8D7E95004495AE /* Announcer.swift */; };
 		B197CE371E8D91CB004495AE /* AnimationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197CE361E8D91CB004495AE /* AnimationProperty.swift */; };
+		B1A54F721EA0002E00A96112 /* NSObject+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A54F711EA0002E00A96112 /* NSObject+YAAL.swift */; };
+		B1A54F741EA0004400A96112 /* CALayer+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A54F731EA0004400A96112 /* CALayer+YAAL.swift */; };
+		B1A54F761EA0007200A96112 /* UILabel+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A54F751EA0007200A96112 /* UILabel+YAAL.swift */; };
+		B1A54F791EA00E6200A96112 /* UIScrollView+YAAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A54F781EA00E6200A96112 /* UIScrollView+YAAL.swift */; };
 		B1D0B4801E89C479000B0E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0B47F1E89C479000B0E24 /* AppDelegate.swift */; };
 		B1D0B4821E89C479000B0E24 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D0B4811E89C479000B0E24 /* GestureViewController.swift */; };
 		B1D0B4851E89C479000B0E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D0B4831E89C479000B0E24 /* Main.storyboard */; };
 		B1D0B4871E89C479000B0E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1D0B4861E89C479000B0E24 /* Assets.xcassets */; };
 		B1D0B48A1E89C479000B0E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D0B4881E89C479000B0E24 /* LaunchScreen.storyboard */; };
-		B1F346211E99923C002E15D7 /* PipeOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F346201E99923C002E15D7 /* PipeOperator.swift */; };
+		B1F346211E99923C002E15D7 /* ChainOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F346201E99923C002E15D7 /* ChainOperator.swift */; };
 		B1F346231E99927E002E15D7 /* VelocitySmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F346221E99927E002E15D7 /* VelocitySmoother.swift */; };
 		B1FE700B1E8DEC1B00CF9840 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE700A1E8DEC1B00CF9840 /* Curve.swift */; };
 		B1FE700D1E8DF33700CF9840 /* MixAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE700C1E8DF33700CF9840 /* MixAnimation.swift */; };
@@ -90,9 +94,13 @@
 		B197CE101E8B146F004495AE /* ValueAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueAnimation.swift; sourceTree = "<group>"; };
 		B197CE171E8B660F004495AE /* YetAnotherAnimationLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YetAnotherAnimationLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B197CE1A1E8B660F004495AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B197CE2E1E8C50E9004495AE /* UIView+Animate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animate.swift"; sourceTree = "<group>"; };
+		B197CE2E1E8C50E9004495AE /* UIView+YAAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+YAAL.swift"; sourceTree = "<group>"; };
 		B197CE341E8D7E95004495AE /* Announcer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcer.swift; sourceTree = "<group>"; };
 		B197CE361E8D91CB004495AE /* AnimationProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationProperty.swift; sourceTree = "<group>"; };
+		B1A54F711EA0002E00A96112 /* NSObject+YAAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+YAAL.swift"; sourceTree = "<group>"; };
+		B1A54F731EA0004400A96112 /* CALayer+YAAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+YAAL.swift"; sourceTree = "<group>"; };
+		B1A54F751EA0007200A96112 /* UILabel+YAAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+YAAL.swift"; sourceTree = "<group>"; };
+		B1A54F781EA00E6200A96112 /* UIScrollView+YAAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+YAAL.swift"; sourceTree = "<group>"; };
 		B1C2ED181E8AE6E1005F0081 /* DisplayLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayLink.swift; sourceTree = "<group>"; };
 		B1D0B47C1E89C479000B0E24 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1D0B47F1E89C479000B0E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +110,7 @@
 		B1D0B4891E89C479000B0E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1D0B48B1E89C479000B0E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1DC14D01E8B08BD00933896 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
-		B1F346201E99923C002E15D7 /* PipeOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeOperator.swift; sourceTree = "<group>"; };
+		B1F346201E99923C002E15D7 /* ChainOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainOperator.swift; sourceTree = "<group>"; };
 		B1F346221E99927E002E15D7 /* VelocitySmoother.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VelocitySmoother.swift; sourceTree = "<group>"; };
 		B1FE700A1E8DEC1B00CF9840 /* Curve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curve.swift; sourceTree = "<group>"; };
 		B1FE700C1E8DF33700CF9840 /* MixAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixAnimation.swift; sourceTree = "<group>"; };
@@ -185,15 +193,14 @@
 			path = AnimationProperty;
 			sourceTree = "<group>";
 		};
-		B17BB1C31E9BEE6B00D287BA /* Types & Extensions */ = {
+		B17BB1C31E9BEE6B00D287BA /* Types & Operators */ = {
 			isa = PBXGroup;
 			children = (
-				B1F346201E99923C002E15D7 /* PipeOperator.swift */,
-				B197CE2E1E8C50E9004495AE /* UIView+Animate.swift */,
+				B1F346201E99923C002E15D7 /* ChainOperator.swift */,
 				B1DC14D01E8B08BD00933896 /* Vector.swift */,
 				B197CE0E1E8B0FF3004495AE /* VectorConvertible.swift */,
 			);
-			path = "Types & Extensions";
+			path = "Types & Operators";
 			sourceTree = "<group>";
 		};
 		B197CE0D1E8B0FB1004495AE /* Sources */ = {
@@ -203,11 +210,24 @@
 				B17BB1C21E9BEE4F00D287BA /* AnimationProperty */,
 				B16E80F21E99586D00E95C31 /* Animations */,
 				B16E80F11E99585B00E95C31 /* Animator */,
+				B1A54F771EA0009800A96112 /* Extensions */,
 				B16E80FB1E995A7300E95C31 /* Solvers */,
-				B17BB1C31E9BEE6B00D287BA /* Types & Extensions */,
+				B17BB1C31E9BEE6B00D287BA /* Types & Operators */,
 				B197CE1A1E8B660F004495AE /* Info.plist */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1A54F771EA0009800A96112 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1A54F731EA0004400A96112 /* CALayer+YAAL.swift */,
+				B1A54F711EA0002E00A96112 /* NSObject+YAAL.swift */,
+				B1A54F751EA0007200A96112 /* UILabel+YAAL.swift */,
+				B1A54F781EA00E6200A96112 /* UIScrollView+YAAL.swift */,
+				B197CE2E1E8C50E9004495AE /* UIView+YAAL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B1D0B4731E89C479000B0E24 = {
@@ -395,21 +415,25 @@
 				B16E80F41E995A2C00E95C31 /* CurveSolver.swift in Sources */,
 				B197CE371E8D91CB004495AE /* AnimationProperty.swift in Sources */,
 				B197CE281E8B6615004495AE /* DisplayLink.swift in Sources */,
-				B197CE2F1E8C50E9004495AE /* UIView+Animate.swift in Sources */,
+				B197CE2F1E8C50E9004495AE /* UIView+YAAL.swift in Sources */,
 				B16E81031E9962C300E95C31 /* SolvableAnimation.swift in Sources */,
+				B1A54F791EA00E6200A96112 /* UIScrollView+YAAL.swift in Sources */,
 				B17BB1BC1E9BEDD400D287BA /* CurveAnimatable.swift in Sources */,
 				B197CE271E8B6615004495AE /* Animator.swift in Sources */,
 				B1FE700D1E8DF33700CF9840 /* MixAnimation.swift in Sources */,
 				B197CE2A1E8B6615004495AE /* Vector.swift in Sources */,
 				B17F18F31E8EE34800D2FA3D /* Solver.swift in Sources */,
 				B16E80F81E995A3900E95C31 /* SpringSolver.swift in Sources */,
+				B1A54F741EA0004400A96112 /* CALayer+YAAL.swift in Sources */,
+				B1A54F761EA0007200A96112 /* UILabel+YAAL.swift in Sources */,
 				B197CE251E8B6615004495AE /* ValueAnimation.swift in Sources */,
 				B16E81011E995AD700E95C31 /* DecayAnimation.swift in Sources */,
 				B197CE261E8B6615004495AE /* Animation.swift in Sources */,
 				B16E80F01E99584B00E95C31 /* SolverAnimatable.swift in Sources */,
+				B1A54F721EA0002E00A96112 /* NSObject+YAAL.swift in Sources */,
 				B16E80FF1E995AC500E95C31 /* CurveAnimation.swift in Sources */,
 				B16E80FD1E995ABF00E95C31 /* SpringAnimation.swift in Sources */,
-				B1F346211E99923C002E15D7 /* PipeOperator.swift in Sources */,
+				B1F346211E99923C002E15D7 /* ChainOperator.swift in Sources */,
 				B197CE351E8D7E95004495AE /* Announcer.swift in Sources */,
 				B17BB1BE1E9BEDE000D287BA /* DecayAnimatable.swift in Sources */,
 				B17BB1C01E9BEDEF00D287BA /* SpringAnimatable.swift in Sources */,

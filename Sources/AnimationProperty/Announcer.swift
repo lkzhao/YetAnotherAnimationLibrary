@@ -69,8 +69,8 @@ public class Announcer<Value: VectorConvertible> {
             listener(old, new)
         }
         if !listeners.isEmpty {
-            let old = Value(vector: old)
-            let new = Value(vector: new)
+            let old = Value.from(vector: old)
+            let new = Value.from(vector: new)
             for listener in listeners.values {
                 listener(old, new)
             }

@@ -20,32 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-public class AnimationProperty<Value: VectorConvertible> {
-    private var _changes: Announcer<Value>?
-    public var changes: Announcer<Value> {
-        if _changes == nil {
-            _changes = Announcer<Value>()
-        }
-        return _changes!
+extension UILabel {
+    public var yaal_textColor: MixAnimation<UIColor> {
+        return yaal_animationFor(key: "textColor",
+                                 getter: { [weak self] in self?.textColor },
+                                 setter: { [weak self] in self?.textColor = $0 })
     }
-
-    public var vector: Value.Vector = Value.Vector() {
-        didSet {
-            if let announcer = _changes {
-                announcer.notify(old: oldValue, new: vector)
-            }
-        }
+    public var yaal_shadowColor: MixAnimation<UIColor> {
+        return yaal_animationFor(key: "shadowColor",
+                                 getter: { [weak self] in self?.shadowColor },
+                                 setter: { [weak self] in self?.shadowColor = $0 })
     }
-
-    public var value: Value {
-        get { return Value.from(vector: vector) }
-        set { vector = newValue.vector }
-    }
-
-    public init() {}
-    public init(value: Value) {
-        self.value = value
+    public var yaal_shadowOffset: MixAnimation<CGSize> {
+        return yaal_animationFor(key: "shadowOffset",
+                                 getter: { [weak self] in self?.shadowOffset },
+                                 setter: { [weak self] in self?.shadowOffset = $0 })
     }
 }

@@ -31,21 +31,21 @@ class GestureViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(gr:))))
         red.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(pan(gr:))))
 
-        red.yaal.perspective.setTo(-1/500)
+        red.layer.yaal_perspective.setTo(-1/500)
 
         let limit = CGFloat.pi / 3
-        red.yaal.center.velocity => { 1 - $0.magnitude / 3000 } => red.yaal.alpha
+        red.yaal_center.velocity => { 1 - $0.magnitude / 3000 } => red.yaal_alpha
 
         // 2d rotation
-        red.yaal.center.velocity => { ($0.x / 1000).clamp(-limit, b: limit) } => red.yaal.rotation
+        red.yaal_center.velocity => { ($0.x / 1000).clamp(-limit, b: limit) } => red.yaal_rotation
 
         // 3d rotation
-        red.yaal.center.velocity => { ($0.x / 1000).clamp(-limit, b: limit) } => red.yaal.rotationY
-        red.yaal.center.velocity => { (-$0.y / 1000).clamp(-limit, b: limit) } => red.yaal.rotationX
+        red.yaal_center.velocity => { ($0.x / 1000).clamp(-limit, b: limit) } => red.yaal_rotationY
+        red.yaal_center.velocity => { (-$0.y / 1000).clamp(-limit, b: limit) } => red.yaal_rotationX
     }
 
     func tap(gr: UITapGestureRecognizer) {
-        red.yaal.center.animateTo(gr.location(in: view))
+        red.yaal_center.animateTo(gr.location(in: view))
     }
 
     var beginPosition: CGPoint?
@@ -55,9 +55,9 @@ class GestureViewController: UIViewController {
             beginPosition = red.center
             fallthrough
         case .changed:
-            red.yaal.center.setTo(gr.translation(in: view) + beginPosition!)
+            red.yaal_center.setTo(gr.translation(in: view) + beginPosition!)
         default:
-            red.yaal.center.decay(initialVelocity:gr.velocity(in: nil), damping: 5)
+            red.yaal_center.decay(initialVelocity:gr.velocity(in: nil), damping: 5)
         }
     }
 }

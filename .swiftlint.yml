@@ -3,6 +3,7 @@ disabled_rules: # rule identifiers to exclude from running
   - shorthand_operator
   - vertical_parameter_alignment
   - opening_brace
+  - variable_name
 
 opt_in_rules: # some rules are only opt-in
   - empty_count

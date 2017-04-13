@@ -50,8 +50,8 @@ public protocol VectorType: ExpressibleByArrayLiteral {
 // implements VectorConvertible, so that all VectorType conform to VectorConvertible
 extension VectorType {
     public typealias Vector = Self
-    public init(vector: Self) {
-        self = vector
+    public static func from(vector: Self) -> Self {
+        return vector
     }
     public var vector: Self {
         return self
