@@ -1,16 +1,16 @@
 # Yet Another Animation Library
 
-Designed for gesture-driven animations. Simple, fast and extensible. 
+Designed for gesture-driven animations. Fast, simple, & extensible!
 
 It is written in pure swift 3.1 with protocol oriented design and extensive use of generics.
 
-Compare to other animation libraries, Animate has the following advantages:
+Consider this as a swift optimized version of facebook's pop. It plays nicer with swift and faster too.
 
-**Fast**: 
+**Fast**:
   * Uses SIMD types and instructions for calculation
   * Better compiler optimization through swift generics
 
-**Easy**:
+**Simple**:
   * Supports Curve(Basic), Spring, & Decay animations out of the box
   * Type safety guaranteed when assigning animation values
   * Observable, including value, velocity, and target value
@@ -76,7 +76,7 @@ view.yaal_center.velocity => { 1 - $0.magnitude / 1000 } => view.yaal_alpha
 // }
 ```
 
-### Set Value (Notify to listeners)
+### Set Value (Notify listeners)
 ```swift
 // this sets the value directly (not animate to). Change listeners are called.
 // Velocity listeners will receive a series of smoothed velocity values.
@@ -110,8 +110,14 @@ For example. the following does a 3d rotate animation when dragged
 override func viewDidLoad() {
     // ...
     squareView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(pan(gr:))))
+<<<<<<< HEAD
     squareView.yaal_center.velocity => { $0.x / 1000 } => squareView.yaal_rotationY
     squareView.yaal_center.velocity => { -$0.y / 1000 } => squareView.yaal_rotationX
+=======
+    squareView.yaal.perspective.setTo(-1.0 / 500.0)
+    squareView.yaal.center.velocity => { $0.x / 1000 } => squareView.yaal.rotationY
+    squareView.yaal.center.velocity => { -$0.y / 1000 } => squareView.yaal.rotationX
+>>>>>>> fc5a1ed0853d122cc821fbb080ddeb8e42828560
 }
 
 func pan(gr: UIPanGestureRecognizer) {
