@@ -110,14 +110,9 @@ For example. the following does a 3d rotate animation when dragged
 override func viewDidLoad() {
     // ...
     squareView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(pan(gr:))))
-<<<<<<< HEAD
+    squareView.yaal_perspective.setTo(-1.0 / 500.0)
     squareView.yaal_center.velocity => { $0.x / 1000 } => squareView.yaal_rotationY
     squareView.yaal_center.velocity => { -$0.y / 1000 } => squareView.yaal_rotationX
-=======
-    squareView.yaal.perspective.setTo(-1.0 / 500.0)
-    squareView.yaal.center.velocity => { $0.x / 1000 } => squareView.yaal.rotationY
-    squareView.yaal.center.velocity => { -$0.y / 1000 } => squareView.yaal.rotationX
->>>>>>> fc5a1ed0853d122cc821fbb080ddeb8e42828560
 }
 
 func pan(gr: UIPanGestureRecognizer) {
