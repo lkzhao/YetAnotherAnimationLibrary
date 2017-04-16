@@ -34,10 +34,12 @@ open class SolvableAnimation<Value: VectorConvertible>: ValueAnimation<Value>, S
 
     open override func didEnd(finished: Bool) {
         super.didEnd(finished: finished)
+        velocity.vector = Value.Vector()
         solver = nil
     }
 
     open override func setTo(_ value: Value) {
+        updateWithCurrentState()
         if solver as? VelocitySmoother<Value> == nil {
             solver = VelocitySmoother<Value>(value: self.value, velocity: velocity)
         }
