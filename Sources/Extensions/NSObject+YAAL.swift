@@ -40,32 +40,34 @@ extension NSObject {
             return state
         }
     }
+}
 
-    public func yaal_animationFor<Value: VectorConvertible>(key: String,
-                                  getter: @escaping () -> Value?,
-                                  setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
-        if let anim = yaalState.animations[key] as? MixAnimation<Value> {
+extension Yaal where Base : NSObject {
+    public func animationFor<Value: VectorConvertible>(key: String,
+                             getter: @escaping () -> Value?,
+                             setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
+        if let anim = base.yaalState.animations[key] as? MixAnimation<Value> {
             return anim
         } else {
             let anim = MixAnimation(getter: getter, setter: setter)
-            yaalState.animations[key] = anim
+            base.yaalState.animations[key] = anim
             return anim
         }
     }
 
-    @discardableResult public func yaal_register<Value: VectorConvertible>(key: String,
-                                                 getter: @escaping () -> Value?,
-                                                 setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
-        return yaal_animationFor(key: key, getter: getter, setter: setter)
+    @discardableResult public func register<Value: VectorConvertible>(key: String,
+                                            getter: @escaping () -> Value?,
+                                            setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
+        return animationFor(key: key, getter: getter, setter: setter)
     }
 
-    public func yaal_animationFor<Value: VectorConvertible>(key: String) -> MixAnimation<Value>? {
-        return yaalState.animations[key] as? MixAnimation<Value>
+    public func animationFor<Value: VectorConvertible>(key: String) -> MixAnimation<Value>? {
+        return base.yaalState.animations[key] as? MixAnimation<Value>
     }
 
-    public func yaal_animationForKeyPath<Value: VectorConvertible>(_ keyPath: String) -> MixAnimation<Value> {
-        return yaal_animationFor(key:keyPath,
-                                 getter: { [weak self] in self?.value(forKeyPath:keyPath) as? Value },
-                                 setter: { [weak self] in self?.setValue($0, forKeyPath:keyPath) })
+    public func animationForKeyPath<Value: VectorConvertible>(_ keyPath: String) -> MixAnimation<Value> {
+        return animationFor(key:keyPath,
+                            getter: { [weak base] in base?.value(forKeyPath:keyPath) as? Value },
+                            setter: { [weak base] in base?.setValue($0, forKeyPath:keyPath) })
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CCFCB181EAA011B008345FC /* YaalCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCFCB171EAA011B008345FC /* YaalCompatible.swift */; };
 		B11C9F5D1E903671004916D1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C9F5C1E903671004916D1 /* CardViewController.swift */; };
 		B16E80F01E99584B00E95C31 /* SolverAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E80EF1E99584B00E95C31 /* SolverAnimatable.swift */; };
 		B16E80F41E995A2C00E95C31 /* CurveSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16E80F31E995A2C00E95C31 /* CurveSolver.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8CCFCB171EAA011B008345FC /* YaalCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YaalCompatible.swift; sourceTree = "<group>"; };
 		B11C9F5C1E903671004916D1 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B16E80EF1E99584B00E95C31 /* SolverAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolverAnimatable.swift; sourceTree = "<group>"; };
 		B16E80F31E995A2C00E95C31 /* CurveSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveSolver.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		B197CE0D1E8B0FB1004495AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8CCFCB171EAA011B008345FC /* YaalCompatible.swift */,
 				B17BB1C11E9BEE2400D287BA /* Animatables */,
 				B17BB1C21E9BEE4F00D287BA /* AnimationProperty */,
 				B16E80F21E99586D00E95C31 /* Animations */,
@@ -221,8 +224,8 @@
 		B1A54F771EA0009800A96112 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B1A54F731EA0004400A96112 /* CALayer+YAAL.swift */,
 				B1A54F711EA0002E00A96112 /* NSObject+YAAL.swift */,
+				B1A54F731EA0004400A96112 /* CALayer+YAAL.swift */,
 				B1A54F751EA0007200A96112 /* UILabel+YAAL.swift */,
 				B1A54F781EA00E6200A96112 /* UIScrollView+YAAL.swift */,
 				B197CE2E1E8C50E9004495AE /* UIView+YAAL.swift */,
@@ -421,6 +424,7 @@
 				B17BB1BC1E9BEDD400D287BA /* CurveAnimatable.swift in Sources */,
 				B197CE271E8B6615004495AE /* Animator.swift in Sources */,
 				B1FE700D1E8DF33700CF9840 /* MixAnimation.swift in Sources */,
+				8CCFCB181EAA011B008345FC /* YaalCompatible.swift in Sources */,
 				B197CE2A1E8B6615004495AE /* Vector.swift in Sources */,
 				B17F18F31E8EE34800D2FA3D /* Solver.swift in Sources */,
 				B16E80F81E995A3900E95C31 /* SpringSolver.swift in Sources */,

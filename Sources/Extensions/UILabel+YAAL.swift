@@ -22,20 +22,20 @@
 
 import UIKit
 
-extension UILabel {
-    public var yaal_textColor: MixAnimation<UIColor> {
-        return yaal_animationFor(key: "textColor",
-                                 getter: { [weak self] in self?.textColor },
-                                 setter: { [weak self] in self?.textColor = $0 })
+extension Yaal where Base : UILabel {
+    public var textColor: MixAnimation<UIColor> {
+        return animationFor(key: "textColor",
+                            getter: { [weak base] in base?.textColor },
+                            setter: { [weak base] in base?.textColor = $0 })
     }
-    public var yaal_shadowColor: MixAnimation<UIColor> {
-        return yaal_animationFor(key: "shadowColor",
-                                 getter: { [weak self] in self?.shadowColor },
-                                 setter: { [weak self] in self?.shadowColor = $0 })
+    public var shadowColor: MixAnimation<UIColor> {
+        return animationFor(key: "shadowColor",
+                            getter: { [weak base] in base?.shadowColor },
+                            setter: { [weak base] in base?.shadowColor = $0 })
     }
-    public var yaal_shadowOffset: MixAnimation<CGSize> {
-        return yaal_animationFor(key: "shadowOffset",
-                                 getter: { [weak self] in self?.shadowOffset },
-                                 setter: { [weak self] in self?.shadowOffset = $0 })
+    public var shadowOffset: MixAnimation<CGSize> {
+        return animationFor(key: "shadowOffset",
+                            getter: { [weak base] in base?.shadowOffset },
+                            setter: { [weak base] in base?.shadowOffset = $0 })
     }
 }
