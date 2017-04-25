@@ -53,6 +53,10 @@ open class ValueAnimation<Value: VectorConvertible>: Animation {
         self.setter = { newValue in }
     }
 
+    public convenience override init() {
+        self.init(value: AnimationProperty<Value>())
+    }
+
     public func setTo(_ value: Value) {
         self.value.value = value
         setter(value)

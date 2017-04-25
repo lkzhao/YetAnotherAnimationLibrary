@@ -52,9 +52,9 @@ private let epsilon: Double = 1.0 / 1000
  */
 
 public class Curve {
-    static let linear = Curve(p1x: 0, p1y: 0, p2x: 1, p2y: 1)
+    public static let linear = Curve(p1x: 0, p1y: 0, p2x: 1, p2y: 1)
 
-    init(p1x: Double, p1y: Double, p2x: Double, p2y: Double) {
+    public init(p1x: Double, p1y: Double, p2x: Double, p2y: Double) {
         cx = 3 * p1x
         bx = 3 * (p2x - p1x) - cx
         ax = 1 - cx - bx
@@ -117,7 +117,7 @@ public class Curve {
         return t2
     }
 
-    func solve(_ x: Double) -> Double {
+    public func solve(_ x: Double) -> Double {
         return sampleCurveY(solveCurveX(x))
     }
 
