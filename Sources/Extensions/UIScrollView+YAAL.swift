@@ -8,30 +8,30 @@
 
 import UIKit
 
-extension UIScrollView {
-    public var yaal_contentOffset: MixAnimation<CGPoint> {
-        return yaal_animationFor(key: "contentOffset",
-                                 getter: { [weak self] in self?.contentOffset },
-                                 setter: { [weak self] in self?.contentOffset = $0 })
+extension Yaal where Base : UIScrollView {
+    public var contentOffset: MixAnimation<CGPoint> {
+        return animationFor(key: "contentOffset",
+                            getter: { [weak base] in base?.contentOffset },
+                            setter: { [weak base] in base?.contentOffset = $0 })
     }
-    public var yaal_contentSize: MixAnimation<CGSize> {
-        return yaal_animationFor(key: "contentSize",
-                                 getter: { [weak self] in self?.contentSize },
-                                 setter: { [weak self] in self?.contentSize = $0 })
+    public var contentSize: MixAnimation<CGSize> {
+        return animationFor(key: "contentSize",
+                            getter: { [weak base] in base?.contentSize },
+                            setter: { [weak base] in base?.contentSize = $0 })
     }
-    public var yaal_zoomScale: MixAnimation<CGFloat> {
-        return yaal_animationFor(key: "zoomScale",
-                                 getter: { [weak self] in self?.zoomScale },
-                                 setter: { [weak self] in self?.zoomScale = $0 })
+    public var zoomScale: MixAnimation<CGFloat> {
+        return animationFor(key: "zoomScale",
+                            getter: { [weak base] in base?.zoomScale },
+                            setter: { [weak base] in base?.zoomScale = $0 })
     }
-    public var yaal_contentInset: MixAnimation<UIEdgeInsets> {
-        return yaal_animationFor(key: "contentInset",
-                                 getter: { [weak self] in self?.contentInset },
-                                 setter: { [weak self] in self?.contentInset = $0 })
+    public var contentInset: MixAnimation<UIEdgeInsets> {
+        return animationFor(key: "contentInset",
+                            getter: { [weak base] in base?.contentInset },
+                            setter: { [weak base] in base?.contentInset = $0 })
     }
-    public var yaal_scrollIndicatorInsets: MixAnimation<UIEdgeInsets> {
-        return yaal_animationFor(key: "scrollIndicatorInsets",
-                                 getter: { [weak self] in self?.scrollIndicatorInsets },
-                                 setter: { [weak self] in self?.scrollIndicatorInsets = $0 })
+    public var scrollIndicatorInsets: MixAnimation<UIEdgeInsets> {
+        return animationFor(key: "scrollIndicatorInsets",
+                            getter: { [weak base] in base?.scrollIndicatorInsets },
+                            setter: { [weak base] in base?.scrollIndicatorInsets = $0 })
     }
 }

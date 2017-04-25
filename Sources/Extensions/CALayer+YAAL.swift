@@ -22,101 +22,101 @@
 
 import UIKit
 
-extension CALayer {
-    public var yaal_position: MixAnimation<CGPoint> {
-        return yaal_animationFor(key: "position",
-                                 getter: { [weak self] in self?.position },
-                                 setter: { [weak self] in self?.position = $0 })
+extension Yaal where Base : CALayer {
+    public var position: MixAnimation<CGPoint> {
+        return animationFor(key: "position",
+                            getter: { [weak base] in base?.position },
+                            setter: { [weak base] in base?.position = $0 })
     }
-    public var yaal_opacity: MixAnimation<Float> {
-        return yaal_animationFor(key: "opacity",
-                                 getter: { [weak self] in self?.opacity },
-                                 setter: { [weak self] in self?.opacity = $0 })
+    public var opacity: MixAnimation<Float> {
+        return animationFor(key: "opacity",
+                            getter: { [weak base] in base?.opacity },
+                            setter: { [weak base] in base?.opacity = $0 })
     }
-    public var yaal_bounds: MixAnimation<CGRect> {
-        return yaal_animationFor(key: "bounds",
-                                 getter: { [weak self] in self?.bounds },
-                                 setter: { [weak self] in self?.bounds = $0 })
+    public var bounds: MixAnimation<CGRect> {
+        return animationFor(key: "bounds",
+                            getter: { [weak base] in base?.bounds },
+                            setter: { [weak base] in base?.bounds = $0 })
     }
-    public var yaal_frame: MixAnimation<CGRect> {
-        return yaal_animationFor(key: "frame",
-                                 getter: { [weak self] in self?.frame },
-                                 setter: { [weak self] in self?.frame = $0 })
+    public var frame: MixAnimation<CGRect> {
+        return animationFor(key: "frame",
+                            getter: { [weak base] in base?.frame },
+                            setter: { [weak base] in base?.frame = $0 })
     }
-    public var yaal_backgroundColor: MixAnimation<CGColor> {
-        return yaal_animationFor(key: "backgroundColor",
-                                 getter: { [weak self] in self?.backgroundColor },
-                                 setter: { [weak self] in self?.backgroundColor = $0 })
-    }
-
-    public var yaal_cornerRadius: MixAnimation<CGFloat> {
-        return yaal_animationFor(key: "cornerRadius",
-                                 getter: { [weak self] in self?.cornerRadius },
-                                 setter: { [weak self] in self?.cornerRadius = $0 })
+    public var backgroundColor: MixAnimation<CGColor> {
+        return animationFor(key: "backgroundColor",
+                            getter: { [weak base] in base?.backgroundColor },
+                            setter: { [weak base] in base?.backgroundColor = $0 })
     }
 
-    public var yaal_zPosition: MixAnimation<CGFloat> {
-        return yaal_animationFor(key: "zPosition",
-                                 getter: { [weak self] in self?.zPosition },
-                                 setter: { [weak self] in self?.zPosition = $0 })
+    public var cornerRadius: MixAnimation<CGFloat> {
+        return animationFor(key: "cornerRadius",
+                            getter: { [weak base] in base?.cornerRadius },
+                            setter: { [weak base] in base?.cornerRadius = $0 })
     }
 
-    public var yaal_borderWidth: MixAnimation<CGFloat> {
-        return yaal_animationFor(key: "borderWidth",
-                                 getter: { [weak self] in self?.borderWidth },
-                                 setter: { [weak self] in self?.borderWidth = $0 })
-    }
-    public var yaal_borderColor: MixAnimation<CGColor> {
-        return yaal_animationFor(key: "borderColor",
-                                 getter: { [weak self] in self?.borderColor },
-                                 setter: { [weak self] in self?.borderColor = $0 })
+    public var zPosition: MixAnimation<CGFloat> {
+        return animationFor(key: "zPosition",
+                            getter: { [weak base] in base?.zPosition },
+                            setter: { [weak base] in base?.zPosition = $0 })
     }
 
-    public var yaal_shadowRadius: MixAnimation<CGFloat> {
-        return yaal_animationFor(key: "shadowRadius",
-                                 getter: { [weak self] in self?.shadowRadius },
-                                 setter: { [weak self] in self?.shadowRadius = $0 })
+    public var borderWidth: MixAnimation<CGFloat> {
+        return animationFor(key: "borderWidth",
+                            getter: { [weak base] in base?.borderWidth },
+                            setter: { [weak base] in base?.borderWidth = $0 })
     }
-    public var yaal_shadowColor: MixAnimation<CGColor> {
-        return yaal_animationFor(key: "shadowColor",
-                                 getter: { [weak self] in self?.shadowColor },
-                                 setter: { [weak self] in self?.shadowColor = $0 })
-    }
-    public var yaal_shadowOffset: MixAnimation<CGSize> {
-        return yaal_animationFor(key: "shadowOffset",
-                                 getter: { [weak self] in self?.shadowOffset },
-                                 setter: { [weak self] in self?.shadowOffset = $0 })
-    }
-    public var yaal_shadowOpacity: MixAnimation<Float> {
-        return yaal_animationFor(key: "shadowOpacity",
-                                 getter: { [weak self] in self?.shadowOpacity },
-                                 setter: { [weak self] in self?.shadowOpacity = $0 })
+    public var borderColor: MixAnimation<CGColor> {
+        return animationFor(key: "borderColor",
+                            getter: { [weak base] in base?.borderColor },
+                            setter: { [weak base] in base?.borderColor = $0 })
     }
 
-    public var yaal_perspective: MixAnimation<CGFloat> {
-        return yaal_animationFor(key: "perspective",
-                                 getter: { [weak self] in self?.transform.m34 },
-                                 setter: { [weak self] in self?.transform.m34 = $0 })
+    public var shadowRadius: MixAnimation<CGFloat> {
+        return animationFor(key: "shadowRadius",
+                            getter: { [weak base] in base?.shadowRadius },
+                            setter: { [weak base] in base?.shadowRadius = $0 })
+    }
+    public var shadowColor: MixAnimation<CGColor> {
+        return animationFor(key: "shadowColor",
+                            getter: { [weak base] in base?.shadowColor },
+                            setter: { [weak base] in base?.shadowColor = $0 })
+    }
+    public var shadowOffset: MixAnimation<CGSize> {
+        return animationFor(key: "shadowOffset",
+                            getter: { [weak base] in base?.shadowOffset },
+                            setter: { [weak base] in base?.shadowOffset = $0 })
+    }
+    public var shadowOpacity: MixAnimation<Float> {
+        return animationFor(key: "shadowOpacity",
+                            getter: { [weak base] in base?.shadowOpacity },
+                            setter: { [weak base] in base?.shadowOpacity = $0 })
     }
 
-    public var yaal_translation: MixAnimation<CGPoint> {
-        return yaal_animationForKeyPath("transform.translation")
-    }
-    public var yaal_translationX: MixAnimation<CGFloat> {
-        return yaal_animationForKeyPath("transform.translation.x")
-    }
-    public var yaal_translationY: MixAnimation<CGFloat> {
-        return yaal_animationForKeyPath("transform.translation.y")
-    }
-    public var yaal_translationZ: MixAnimation<CGFloat> {
-        return yaal_animationForKeyPath("transform.translation.z")
+    public var perspective: MixAnimation<CGFloat> {
+        return animationFor(key: "perspective",
+                            getter: { [weak base] in base?.transform.m34 },
+                            setter: { [weak base] in base?.transform.m34 = $0 })
     }
 
-    public var yaal_scale: MixAnimation<CGFloat> { return yaal_animationForKeyPath("transform.scale") }
-    public var yaal_scaleX: MixAnimation<CGFloat> { return yaal_animationForKeyPath("transform.scale.x") }
-    public var yaal_scaleY: MixAnimation<CGFloat> { return yaal_animationForKeyPath("transform.scale.y") }
+    public var translation: MixAnimation<CGPoint> {
+        return animationForKeyPath("transform.translation")
+    }
+    public var translationX: MixAnimation<CGFloat> {
+        return animationForKeyPath("transform.translation.x")
+    }
+    public var translationY: MixAnimation<CGFloat> {
+        return animationForKeyPath("transform.translation.y")
+    }
+    public var translationZ: MixAnimation<CGFloat> {
+        return animationForKeyPath("transform.translation.z")
+    }
 
-    public var yaal_rotation: MixAnimation<CGFloat> { return yaal_animationForKeyPath("transform.rotation") }
-    public var yaal_rotationX: MixAnimation<CGFloat> { return yaal_animationForKeyPath("transform.rotation.x") }
-    public var yaal_rotationY: MixAnimation<CGFloat> { return yaal_animationForKeyPath("transform.rotation.y") }
+    public var scale: MixAnimation<CGFloat> { return animationForKeyPath("transform.scale") }
+    public var scaleX: MixAnimation<CGFloat> { return animationForKeyPath("transform.scale.x") }
+    public var scaleY: MixAnimation<CGFloat> { return animationForKeyPath("transform.scale.y") }
+
+    public var rotation: MixAnimation<CGFloat> { return animationForKeyPath("transform.rotation") }
+    public var rotationX: MixAnimation<CGFloat> { return animationForKeyPath("transform.rotation.x") }
+    public var rotationY: MixAnimation<CGFloat> { return animationForKeyPath("transform.rotation.y") }
 }
