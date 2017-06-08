@@ -33,13 +33,13 @@ precedencegroup AnimationPipePrecedence {
 }
 infix operator => : AnimationPipePrecedence
 
-public func =><Value: VectorConvertible>(lhs: AnimationProperty<Value>, rhs: MixAnimation<Value>) {
+public func =><Value>(lhs: AnimationProperty<Value>, rhs: MixAnimation<Value>) {
     lhs.changes.addListener { [weak rhs] _, newValue in
         rhs?.setTo(newValue)
     }
 }
 
-public func =><InputValue: VectorConvertible, OutputValue: VectorConvertible>
+public func =><InputValue, OutputValue>
     (lhs: PipeBuilder<InputValue, OutputValue>, rhs: MixAnimation<OutputValue>) {
     lhs.root.changes.addListener { [weak rhs, converter=lhs.converter] _, newValue in
         if let newValue = converter(newValue) {
@@ -48,12 +48,12 @@ public func =><InputValue: VectorConvertible, OutputValue: VectorConvertible>
     }
 }
 
-public func =><InputValue: VectorConvertible, OutputValue: VectorConvertible>
+public func =><InputValue, OutputValue>
     (lhs: AnimationProperty<InputValue>, rhs:@escaping (InputValue) -> OutputValue?) -> PipeBuilder<InputValue, OutputValue> {
     return PipeBuilder(root: lhs, converter: rhs)
 }
 
-public func =><InputValue: VectorConvertible, PipeValue: VectorConvertible, OutputValue: VectorConvertible>
+public func =><InputValue, PipeValue, OutputValue>
     (lhs: PipeBuilder<InputValue, PipeValue>, rhs:@escaping (PipeValue) -> OutputValue?) -> PipeBuilder<InputValue, OutputValue> {
     return PipeBuilder(root: lhs.root) { [converter=lhs.converter] newValue in
         if let newValue = converter(newValue) {

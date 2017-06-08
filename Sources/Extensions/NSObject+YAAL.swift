@@ -43,7 +43,7 @@ extension NSObject {
 }
 
 extension Yaal where Base : NSObject {
-    public func animationFor<Value: VectorConvertible>(key: String,
+    public func animationFor<Value>(key: String,
                              getter: @escaping () -> Value?,
                              setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
         if let anim = base.yaalState.animations[key] as? MixAnimation<Value> {
@@ -55,17 +55,17 @@ extension Yaal where Base : NSObject {
         }
     }
 
-    @discardableResult public func register<Value: VectorConvertible>(key: String,
+    @discardableResult public func register<Value>(key: String,
                                             getter: @escaping () -> Value?,
                                             setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
         return animationFor(key: key, getter: getter, setter: setter)
     }
 
-    public func animationFor<Value: VectorConvertible>(key: String) -> MixAnimation<Value>? {
+    public func animationFor<Value>(key: String) -> MixAnimation<Value>? {
         return base.yaalState.animations[key] as? MixAnimation<Value>
     }
 
-    public func animationForKeyPath<Value: VectorConvertible>(_ keyPath: String) -> MixAnimation<Value> {
+    public func animationForKeyPath<Value>(_ keyPath: String) -> MixAnimation<Value> {
         return animationFor(key:keyPath,
                             getter: { [weak base] in base?.value(forKeyPath:keyPath) as? Value },
                             setter: { [weak base] in base?.setValue($0, forKeyPath:keyPath) })

@@ -32,7 +32,7 @@ internal class DisplayLink: NSObject {
         return displayLink != nil
     }
 
-    internal func _update() {
+    @objc internal func _update() {
         guard let displayLink = displayLink else { return }
         let currentTime = CACurrentMediaTime()
         defer { lastUpdateTime = currentTime }
