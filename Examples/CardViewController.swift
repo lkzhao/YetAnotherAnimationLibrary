@@ -37,7 +37,7 @@ class CardViewController: UIViewController {
         card = generateCard()
     }
 
-    func pan(gr: UIPanGestureRecognizer) {
+    @objc func pan(gr: UIPanGestureRecognizer) {
         let translation = gr.translation(in: view)
         switch gr.state {
         case .began:

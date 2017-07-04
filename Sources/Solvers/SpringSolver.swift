@@ -27,22 +27,16 @@ public struct SpringSolver<Value: VectorConvertible>: RK4Solver {
     public let stiffness: Double
     public let damping: Double
     public let threshold: Double
-    public let current: AnimationProperty<Value>
-    public let velocity: AnimationProperty<Value>
-    public let target: AnimationProperty<Value>
+    public var current: AnimationProperty<Value>!
+    public var velocity: AnimationProperty<Value>!
+    public var target: AnimationProperty<Value>!
 
     public init(stiffness: Double,
                 damping: Double,
-                threshold: Double,
-                current: AnimationProperty<Value>,
-                velocity: AnimationProperty<Value>,
-                target: AnimationProperty<Value>) {
+                threshold: Double) {
         self.stiffness = stiffness
         self.damping = damping
         self.threshold = threshold
-        self.current = current
-        self.velocity = velocity
-        self.target = target
     }
 
     public func acceleration(current: Vector, velocity: Vector) -> Vector {

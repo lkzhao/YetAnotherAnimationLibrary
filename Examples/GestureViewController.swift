@@ -44,12 +44,12 @@ class GestureViewController: UIViewController {
         red.yaal.center.velocity => { (-$0.y / 1000).clamp(-limit, b: limit) } => red.yaal.rotationX
     }
 
-    func tap(gr: UITapGestureRecognizer) {
+    @objc func tap(gr: UITapGestureRecognizer) {
         red.yaal.center.animateTo(gr.location(in: view))
     }
 
     var beginPosition: CGPoint?
-    func pan(gr: UIPanGestureRecognizer) {
+    @objc func pan(gr: UIPanGestureRecognizer) {
         switch gr.state {
         case .began:
             beginPosition = red.center

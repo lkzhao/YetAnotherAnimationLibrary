@@ -27,17 +27,13 @@ public struct DecaySolver<Value: VectorConvertible>: RK4Solver {
 
     public let damping: Double
     public let threshold: Double
-    public var current: AnimationProperty<Value>
-    public var velocity: AnimationProperty<Value>
+    public var current: AnimationProperty<Value>!
+    public var velocity: AnimationProperty<Value>!
 
     public init(damping: Double,
-                threshold: Double,
-                current: AnimationProperty<Value>,
-                velocity: AnimationProperty<Value>) {
+                threshold: Double) {
         self.damping = damping
         self.threshold = threshold
-        self.current = current
-        self.velocity = velocity
     }
 
     public func acceleration(current: Vector, velocity: Vector) -> Vector {

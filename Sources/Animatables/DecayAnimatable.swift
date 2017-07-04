@@ -42,9 +42,11 @@ extension DecayAnimatable {
         if let initialVelocity = initialVelocity {
             velocity.value = initialVelocity
         }
-        solver = DecaySolver(damping: damping ?? defaultDamping,
-                             threshold: threshold ?? defaultThreshold,
-                             current: value, velocity: velocity)
+        var solver = DecaySolver<Value>(damping: damping ?? defaultDamping,
+                                        threshold: threshold ?? defaultThreshold)
+        solver.current = value
+        solver.velocity = velocity
+        self.solver = solver
         start(completionHandler)
     }
 }

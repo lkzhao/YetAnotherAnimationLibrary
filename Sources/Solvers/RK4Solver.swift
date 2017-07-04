@@ -28,8 +28,8 @@ public protocol RK4Solver: Solver {
 
     mutating func solve(dt: TimeInterval) -> Bool
 
-    var current: AnimationProperty<Value> { get }
-    var velocity: AnimationProperty<Value> { get }
+    var current: AnimationProperty<Value>! { get }
+    var velocity: AnimationProperty<Value>! { get }
     func acceleration(current: Vector, velocity: Vector) -> Vector
     func updateWith(newCurrent: Vector, newVelocity: Vector) -> Bool
 }

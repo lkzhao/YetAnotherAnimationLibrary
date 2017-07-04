@@ -44,10 +44,13 @@ extension SpringAnimatable {
         if let initialVelocity = initialVelocity {
             velocity.value = initialVelocity
         }
-        solver = SpringSolver(stiffness: stiffness ?? defaultStiffness,
-                              damping: damping ?? defaultDamping,
-                              threshold: threshold ?? defaultThreshold,
-                              current: value, velocity: velocity, target: target)
+        var solver = SpringSolver<Value>(stiffness: stiffness ?? defaultStiffness,
+                                         damping: damping ?? defaultDamping,
+                                         threshold: threshold ?? defaultThreshold)
+        solver.current = value
+        solver.velocity = velocity
+        solver.target = target
+        self.solver = solver
         start(completionHandler)
     }
 }
