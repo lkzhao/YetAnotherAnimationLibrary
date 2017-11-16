@@ -25,7 +25,7 @@ class GestureViewController: UIViewController {
 
         red.center = view.center
         red.layer.cornerRadius = 7
-        red.backgroundColor = UIColor(colorLiteralRed: 1.0, green: 0.5, blue: 0.5, alpha: 1.0)
+        red.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 1.0)
         view.addSubview(red)
 
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(gr:))))
