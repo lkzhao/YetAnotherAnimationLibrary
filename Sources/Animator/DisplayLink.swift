@@ -22,7 +22,7 @@
 
 import UIKit
 
-fileprivate let minDeltaTime = 1.0 / 30.0
+private let minDeltaTime = 1.0 / 30.0
 
 /// The `update(dt:)` function will be called on every screen refresh if started
 internal class DisplayLink: NSObject {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension Yaal where Base : UIScrollView {
+extension Yaal where Base: UIScrollView {
     public var contentOffset: MixAnimation<CGPoint> {
         return animationFor(key: "contentOffset",
                             getter: { [weak base] in base?.contentOffset },

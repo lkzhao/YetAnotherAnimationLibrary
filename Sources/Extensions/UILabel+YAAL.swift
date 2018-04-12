@@ -22,7 +22,7 @@
 
 import UIKit
 
-extension Yaal where Base : UILabel {
+extension Yaal where Base: UILabel {
     public var textColor: MixAnimation<UIColor> {
         return animationFor(key: "textColor",
                             getter: { [weak base] in base?.textColor },

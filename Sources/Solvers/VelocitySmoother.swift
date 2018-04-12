@@ -8,7 +8,7 @@
 
 import Foundation
 
-fileprivate let euler = M_E
+private let euler = M_E
 public struct VelocitySmoother<Value: VectorConvertible>: Solver {
     public let value: AnimationProperty<Value>
     public let velocity: AnimationProperty<Value>

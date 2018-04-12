@@ -42,7 +42,7 @@ extension NSObject {
     }
 }
 
-extension Yaal where Base : NSObject {
+extension Yaal where Base: NSObject {
     public func animationFor<Value>(key: String,
                              getter: @escaping () -> Value?,
                              setter: @escaping (Value) -> Void) -> MixAnimation<Value> {
@@ -66,8 +66,8 @@ extension Yaal where Base : NSObject {
     }
 
     public func animationForKeyPath<Value>(_ keyPath: String) -> MixAnimation<Value> {
-        return animationFor(key:keyPath,
-                            getter: { [weak base] in base?.value(forKeyPath:keyPath) as? Value },
-                            setter: { [weak base] in base?.setValue($0, forKeyPath:keyPath) })
+        return animationFor(key: keyPath,
+                            getter: { [weak base] in base?.value(forKeyPath: keyPath) as? Value },
+                            setter: { [weak base] in base?.setValue($0, forKeyPath: keyPath) })
     }
 }

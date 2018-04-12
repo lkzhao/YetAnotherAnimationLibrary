@@ -22,7 +22,7 @@
 
 import UIKit
 
-extension Yaal where Base : CALayer {
+extension Yaal where Base: CALayer {
     public var position: MixAnimation<CGPoint> {
         return animationFor(key: "position",
                             getter: { [weak base] in base?.position },

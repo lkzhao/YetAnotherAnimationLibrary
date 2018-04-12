@@ -22,7 +22,7 @@
 
 import UIKit
 
-extension Yaal where Base : UIView {
+extension Yaal where Base: UIView {
     public var center: MixAnimation<CGPoint> {
         return animationFor(key: "center",
                             getter: { [weak base] in base?.center },

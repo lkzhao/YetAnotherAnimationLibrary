@@ -54,4 +54,4 @@ extension YaalCompatible {
     }
 }
 
-extension NSObject : YaalCompatible {}
+extension NSObject: YaalCompatible {}
