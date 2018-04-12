@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "YetAnotherAnimationLibrary"
-  s.version          = "1.1.1"
+  s.version          = "1.2.0"
   s.summary          = "Designed for gesture-driven animations. Simple, fast and extensible."
 
   s.description      = <<-DESC
