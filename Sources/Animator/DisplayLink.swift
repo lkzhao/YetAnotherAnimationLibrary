@@ -50,13 +50,13 @@ internal class DisplayLink: NSObject {
         guard !isRunning else { return }
         lastUpdateTime = CACurrentMediaTime()
         displayLink = CADisplayLink(target: self, selector: #selector(_update))
-        displayLink!.add(to: .main, forMode: .commonModes)
+        displayLink!.add(to: .main, forMode: .common)
     }
 
     internal func stop() {
         guard let displayLink = displayLink else { return }
         displayLink.isPaused = true
-        displayLink.remove(from: .main, forMode: .commonModes)
+        displayLink.remove(from: .main, forMode: .common)
         self.displayLink = nil
     }
 }
