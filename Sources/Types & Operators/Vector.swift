@@ -58,17 +58,6 @@ extension VectorType {
     }
 }
 
-public protocol SIMDVectorType {
-    static func * (lhs: Self, rhs: Double) -> Self
-    static func / (lhs: Self, rhs: Double) -> Self
-}
-
-extension SIMDVectorType {
-    public static func / (lhs: Self, rhs: Double) -> Self {
-        return lhs * (1 / rhs)
-    }
-}
-
 extension Double: VectorType, VectorConvertible {
     public static var zero = 0.0
     public static var rawValueCount: Int { return 1 }
@@ -84,7 +73,7 @@ extension Double: VectorType, VectorConvertible {
     }
 }
 
-extension double2: VectorType, VectorConvertible, SIMDVectorType {
+extension double2: VectorType, VectorConvertible {
     public static var zero = double2()
     public static var rawValueCount: Int { return 2 }
     public func distance(between: double2) -> Double {
@@ -92,7 +81,7 @@ extension double2: VectorType, VectorConvertible, SIMDVectorType {
     }
 }
 
-extension double3: VectorType, VectorConvertible, SIMDVectorType {
+extension double3: VectorType, VectorConvertible {
     public static var zero = double3()
     public static var rawValueCount: Int { return 3 }
     public func distance(between: double3) -> Double {
@@ -100,7 +89,7 @@ extension double3: VectorType, VectorConvertible, SIMDVectorType {
     }
 }
 
-extension double4: VectorType, VectorConvertible, SIMDVectorType {
+extension double4: VectorType, VectorConvertible {
     public static var zero = double4()
     public static var rawValueCount: Int { return 4 }
     public func distance(between: double4) -> Double {

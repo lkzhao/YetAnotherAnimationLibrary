@@ -8,7 +8,7 @@ class CardViewController: UIViewController {
     var backCard: UIView?
 
     func generateCard() -> UIView {
-        let frame = UIEdgeInsetsInsetRect(view.bounds, UIEdgeInsets(top:120, left: 50, bottom: 120, right: 50))
+        let frame = view.bounds.inset(by: UIEdgeInsets(top:120, left: 50, bottom: 120, right: 50))
         let card = UIView(frame: frame)
 
         card.layer.cornerRadius = 7
