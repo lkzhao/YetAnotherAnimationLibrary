@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = "YetAnotherAnimationLibrary"
-  s.version          = "1.3.0"
+  s.version          = "1.4.0"
   s.summary          = "Designed for gesture-driven animations. Simple, fast and extensible."
 
   s.description      = <<-DESC
                         Designed for gesture-driven animations. Simple, fast and extensible.
 
-                        It is written in pure swift 3.1 with protocol oriented design and extensive use of generics.
+                        It is written in pure swift with protocol oriented design and extensive use of generics.
                        DESC
 
   s.homepage         = "https://github.com/lkzhao/YetAnotherAnimationLibrary"
@@ -21,5 +21,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.swift_versions = ['5.0']
   s.source_files = 'Sources/**/*.swift'
 end
