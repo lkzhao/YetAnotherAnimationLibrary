@@ -53,6 +53,9 @@ private let epsilon: Double = 1.0 / 1000
 
 public class Curve {
     public static let linear = Curve(p1x: 0, p1y: 0, p2x: 1, p2y: 1)
+    public static let easeIn = Curve(p1x: 0.42, p1y: 0, p2x: 0, p2y: 1)
+    public static let easeOut = Curve(p1x: 0, p1y: 0, p2x: 0.58, p2y: 1)
+    public static let easeInOut = Curve(p1x: 0.42, p1y: 0, p2x: 0.58, p2y: 1)
 
     public init(p1x: Double, p1y: Double, p2x: Double, p2y: Double) {
         cx = 3 * p1x

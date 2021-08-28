@@ -22,7 +22,7 @@
 
 import Foundation
 
-public protocol Animatable: class {
+public protocol Animatable: AnyObject {
     func update(dt: TimeInterval)
     func start(_ completionHandler: ((Bool) -> Void)?)
     func finish()

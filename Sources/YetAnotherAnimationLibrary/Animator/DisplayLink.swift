@@ -33,7 +33,7 @@ internal class DisplayLink: NSObject {
     }
 
     @objc internal func _update() {
-        guard let displayLink = displayLink else { return }
+        guard let _ = displayLink else { return }
         let currentTime = CACurrentMediaTime()
         defer { lastUpdateTime = currentTime }
         var dt = currentTime - lastUpdateTime
