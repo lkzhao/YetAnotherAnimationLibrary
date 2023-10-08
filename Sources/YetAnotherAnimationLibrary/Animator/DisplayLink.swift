@@ -50,6 +50,9 @@ internal class DisplayLink: NSObject {
         guard !isRunning else { return }
         lastUpdateTime = CACurrentMediaTime()
         displayLink = CADisplayLink(target: self, selector: #selector(_update))
+        if #available(iOS 15.0, *) {
+            displayLink?.preferredFrameRateRange = CAFrameRateRange(minimum:80, maximum:120, preferred:120)
+        }
         displayLink!.add(to: .main, forMode: .common)
     }
 
